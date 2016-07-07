@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<cstdlib>
+int main()
+{
+	FILE *fp;
+	char ch[80];
+	fp=fopen("export.gpx","r+");
+	if(fp==NULL)
+	{
+		printf("¡ä¨°?a???t¡ä¨ª?¨®¡ê??¨¦?¨¹¨°a¡ä¨°?a¦Ì????t2?¡ä??¨²");
+		exit(-1);
+	}
+	else
+	{
+		while(fgets(ch,80,fp)!=NULL)
+		{
+			printf("%s",ch);
+			fclose(fp);
+		}
+		
+	}
+	return 0;
+}
